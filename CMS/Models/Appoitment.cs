@@ -10,6 +10,17 @@ namespace CMS.Models
     {   
         [Key]
         public int ID { get; set; }
-        public int MyProperty { get; set; }
+
+        [Required]
+        public DateTime Date { get; set; }
+
+        [Required]
+        public int BillAmount { get; set; }
+        
+        [Required]
+        public string Diease { get; set; }
+
+        [Required]
+        public string Prescription { get; set; }
     }
 }
