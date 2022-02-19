@@ -1,0 +1,66 @@
+﻿@model CMS.Models.Patients
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@if (TempData["ErrorInfo"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>Information</strong> @TempData["ErrorInfo"]
+    </div>
+}
+<div>
+    <h4>Patients</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientPhone)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="my-2">
+    <div class="col-md-offset-2 col-md-10">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PatientID }, new { @class = "btn btn-outline-warning" })
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-primary" })
+    </div>
+</div>
