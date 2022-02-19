@@ -9,7 +9,7 @@ namespace CMS.Models
     public class Appoitment
     {   
         [Key]
-        public int AppoitmentID { get; set; }
+        public int AppointID { get; set; }
         
         //From Patient table
         public string PatientName { get; set; }
@@ -26,7 +26,7 @@ namespace CMS.Models
         public int BillAmount { get; set; }
         
         [Required]
-        public string Diease { get; set; }
+        public string Disease { get; set; }
 
         [Required]
         public string Prescription { get; set; }

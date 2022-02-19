@@ -156,6 +156,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Appoitment.cs" />
+    <Compile Include="Models\DataCollection.cs" />
     <Compile Include="Models\Memebership.cs" />
     <Compile Include="Models\Patients.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +227,7 @@
     <Content Include="Views\Patient\Delete.cshtml" />
     <Content Include="Views\Appoitment\Details.cshtml" />
     <Content Include="Views\Appoitment\Index.cshtml" />
+    <Content Include="Views\Appoitment\MakeNewAppointment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

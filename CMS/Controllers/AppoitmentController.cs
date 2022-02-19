@@ -22,21 +22,7 @@ namespace CMS.Controllers
         // GET: Appoitment/Details/5
         public ActionResult Details(int id)
         {
-            try
-            {
-                var patient = _patientDAL.GetPatientByID(id).FirstOrDefault();
-                if (patient == null)
-                {
-                    TempData["Info"] = "No Patient are available with ID " + id.ToString();
-                    return RedirectToAction("Index");
-                }
-                return View(patient);
-            }
-            catch (Exception ex)
-            {
-                TempData["ErrorInfo"] = ex.Message;
-                return View();
-            }
+            return View();
         }
 
         // GET: Appoitment/Create
@@ -101,6 +87,26 @@ namespace CMS.Controllers
             }
             catch
             {
+                return View();
+            }
+        }
+
+
+        public ActionResult MakeNewAppointment(int id)
+        {
+            try
+            {
+                var patient = _patientDAL.GetPatientByID(id).FirstOrDefault();
+                if (patient == null)
+                {
+                    TempData["Info"] = "No Patient are available with ID " + id.ToString();
+                    return RedirectToAction("Index");
+                }
+                return View();
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorInfo"] = ex.Message;
                 return View();
             }
         }

@@ -82,7 +82,7 @@ else if (TempData["ErrorInfo"] != null)
                 @Html.ActionLink("Edit", "Edit", new { id = item.PatientID }, new { @class = "btn btn-sm btn-outline-secondary" })
                 @Html.ActionLink("Details", "Details", new { id = item.PatientID }, new { @class = "btn btn-sm btn-outline-warning" })
                 @Html.ActionLink("Delete", "Delete", new { id = item.PatientID }, new { @class = "btn btn-sm btn-outline-danger" })
-                @Html.ActionLink("New Appoitment", "Details", "Appoitment", new { id = item.PatientID }, new { @class = "btn btn-sm btn-outline-primary" })
+                @Html.ActionLink("New Appoitment", "MakeNewAppointment", "Appoitment", new { id = item.PatientID }, new { @class = "btn btn-sm btn-outline-primary" })
 
             </td>
         </tr>

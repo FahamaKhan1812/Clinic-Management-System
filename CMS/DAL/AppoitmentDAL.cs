@@ -32,14 +32,14 @@ namespace CMS.DAL
                 {
                     AppoitmentRecords.Add(new Appoitment
                     {
-                        AppoitmentID = Convert.ToInt32(dr["AppoitmentID"]),
+                        AppointID = Convert.ToInt32(dr["AppointID"]),
                         PatientName = dr["PatientName"].ToString(),
                         PatientAge = Convert.ToInt32(dr["PatientAge"]),
                         PatientGender = dr["PatientGender"].ToString(),
                         DoctorName = dr["DoctorName"].ToString(),
                         Date = (DateTime) dr["Date"],
                         BillAmount = Convert.ToInt32(dr["BillAmount"]),
-                        Diease = dr["Diease"].ToString(),
+                        Disease = dr["Disease"].ToString(),
                         Prescription = dr["Prescription"].ToString()
                     });
                 }
