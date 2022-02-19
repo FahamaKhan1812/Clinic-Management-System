@@ -10,11 +10,13 @@ namespace CMS.Controllers
     public class AppoitmentController : Controller
     {
         PatientDAL _patientDAL = new PatientDAL();
+        AppoitmentDAL _appoitmentDAL = new AppoitmentDAL();
 
         // GET: Appoitment
         public ActionResult Index()
         {
-            return View();
+            var patientList = _appoitmentDAL.GElAllRecords();
+            return View(patientList);
         }
 
         // GET: Appoitment/Details/5

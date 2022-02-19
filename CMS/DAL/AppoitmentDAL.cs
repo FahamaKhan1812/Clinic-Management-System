@@ -14,7 +14,7 @@ namespace CMS.DAL
         string conString = ConfigurationManager.ConnectionStrings["DefaultCon"].ToString();
 
         //Gel All Patients
-        public List<Appoitment> GetAllPatients()
+        public List<Appoitment> GElAllRecords()
         {
             List<Appoitment> PatientsList = new List<Appoitment>();
             using (SqlConnection connection = new SqlConnection(conString))

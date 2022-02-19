@@ -10,6 +10,14 @@ namespace CMS.Models
     {   
         [Key]
         public int AppoitmentID { get; set; }
+        
+        //From Patient table
+        public string PatientName { get; set; }
+        public int PatientAge { get; set; }
+        public string PatientGender { get; set; }
+        
+        //From Doctor table
+        public string DoctorName { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
