@@ -9,7 +9,7 @@ namespace CMS.Models
     public class Appoitment
     {   
         [Key]
-        public int ID { get; set; }
+        public int AppoitmentID { get; set; }
 
         [Required]
         public DateTime Date { get; set; }
