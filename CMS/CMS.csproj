@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppoitmentController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="DAL\PatientDAL.cs" />
     <Compile Include="emp.cs">
@@ -153,6 +154,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Appoitment.cs" />
     <Compile Include="Models\Memebership.cs" />
     <Compile Include="Models\Patients.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -221,6 +223,7 @@
     <Content Include="Views\Patient\Details.cshtml" />
     <Content Include="Views\Patient\Edit.cshtml" />
     <Content Include="Views\Patient\Delete.cshtml" />
+    <Content Include="Views\Appoitment\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
