@@ -16,23 +16,27 @@ namespace CMS.DAL
         //Gel All Patients
         public List<Appoitment> GElAllRecords()
         {
-            List<Appoitment> PatientsList = new List<Appoitment>();
+            List<Appoitment> AppoitmentRecords = new List<Appoitment>();
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 SqlCommand command = connection.CreateCommand();
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "GetAllPatientRecords";
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dtProducts = new DataTable();
+                DataTable dtRecords = new DataTable();
                 connection.Open();
-                adapter.Fill(dtProducts);
+                adapter.Fill(dtRecords);
                 connection.Close();
 
-                foreach (DataRow dr in dtProducts.Rows)
+                foreach (DataRow dr in dtRecords.Rows)
                 {
-                    PatientsList.Add(new Appoitment
+                    AppoitmentRecords.Add(new Appoitment
                     {
                         AppoitmentID = Convert.ToInt32(dr["AppoitmentID"]),
+                        PatientName = dr["PatientName"].ToString(),
+                        PatientAge = Convert.ToInt32(dr["PatientAge"]),
+                        PatientGender = dr["PatientGender"].ToString(),
+                        DoctorName = dr["DoctorName"].ToString(),
                         Date = (DateTime) dr["Date"],
                         BillAmount = Convert.ToInt32(dr["BillAmount"]),
                         Diease = dr["Diease"].ToString(),
@@ -41,7 +45,7 @@ namespace CMS.DAL
                 }
 
             }
-            return PatientsList;
+            return AppoitmentRecords;
         }
 
     }
