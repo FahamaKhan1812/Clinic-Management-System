@@ -91,7 +91,6 @@ namespace CMS.Controllers
             }
         }
 
-
         public ActionResult MakeNewAppointment(int id)
         {
             try
