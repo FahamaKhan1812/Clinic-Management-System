@@ -38,9 +38,7 @@ namespace CMS.DAL
                         PatientGender = dr["PatientGender"].ToString(),
                         DoctorName = dr["DoctorName"].ToString(),
                         Date = (DateTime) dr["Date"],
-                        BillAmount = Convert.ToInt32(dr["BillAmount"]),
-                        Disease = dr["Disease"].ToString(),
-                        Prescription = dr["Prescription"].ToString()
+                        BillAmount = Convert.ToInt32(dr["BillAmount"])
                     });
                 }
 

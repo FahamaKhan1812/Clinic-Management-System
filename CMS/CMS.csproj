@@ -157,7 +157,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Appoitment.cs" />
-    <Compile Include="Models\DataCollection.cs" />
     <Compile Include="Models\Doctors.cs" />
     <Compile Include="Models\Memebership.cs" />
     <Compile Include="Models\Patients.cs" />

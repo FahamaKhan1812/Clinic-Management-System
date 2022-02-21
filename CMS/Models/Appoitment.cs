@@ -24,11 +24,6 @@ namespace CMS.Models
 
         [Required]
         public int BillAmount { get; set; }
-        
-        [Required]
-        public string Disease { get; set; }
-
-        [Required]
-        public string Prescription { get; set; }
+      
     }
 }
