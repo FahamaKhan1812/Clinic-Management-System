@@ -13,7 +13,7 @@ namespace CMS.DAL
     {
         string conString = ConfigurationManager.ConnectionStrings["DefaultCon"].ToString();
 
-        //Gel All Patients
+        //Gel All PatientRecords
         public List<Appoitment> GElAllRecords()
         {
             List<Appoitment> AppoitmentRecords = new List<Appoitment>();
