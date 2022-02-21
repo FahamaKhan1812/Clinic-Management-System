@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<CMS.Models.Patients>
+@using CMS.Models
 
 @{
     ViewBag.Title = "Index";
@@ -109,20 +110,17 @@ else if (TempData["ErrorInfo"] != null)
 
                     <div class="col-md-4">
                         <label for="validationCustom02" class="form-label">Doctor</label>
-                        <select class="form-select" id="validationCustom02" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>...</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a doctor.
-                        </div>
+                        @{
+                            var doctor = new Doctors().GetDoctors();
+                        }
+                            @Html.DropDownList("patientId", doctor.Select(e => new SelectListItem(){Text = e.DoctorName, Value = e.DoctorID.ToString() }),"Select a doctor", new {@class =  "form-select"})
                     </div>
 
                     <div class="col-md-6">
                         <label for="validationCustom03" class="form-label">Amount</label>
                         <input type="number" class="form-control" id="validationCustom03" required>
                         <div class="invalid-feedback">
-                            Invalid number.
+                            Invalid Number
                         </div>
                     </div>
 

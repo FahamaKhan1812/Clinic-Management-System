@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CMS.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 
@@ -8,6 +10,8 @@ namespace CMS.Models
 {
     public class Patients
     {
+        string conString = ConfigurationManager.ConnectionStrings["DefaultCon"].ToString();
+
         [Key]
         public int PatientID { get; set; }
 
@@ -25,5 +29,12 @@ namespace CMS.Models
         
         [Required]
         public int PatientPhone { get; set; }
+
+        public List<Patients> GetPatients()
+        {
+            List<Patients> patients = new PatientDAL().GetAllPatients();
+            return patients;
+        }
+
     }
 }
